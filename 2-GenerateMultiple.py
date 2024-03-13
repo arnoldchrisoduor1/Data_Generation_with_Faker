@@ -3,4 +3,11 @@ from faker import Faker
 fake = Faker()
 
 for _ in range(10):
-    print(fake.name())
+
+    sim_person={"name":fake.name(),
+         "location":fake.address(),
+         "proffesion":fake.job(),
+         "comp_description":fake.user_agent()
+         }
+    
+    print(sim_person)
